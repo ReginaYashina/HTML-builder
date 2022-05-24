@@ -22,5 +22,6 @@ fs.writeFile(
       );
     });
     process.on('exit', () => stdout.write('Thank you! Good luck)'));
+    process.on('SIGINT', () => process.exit());
   }
 );
